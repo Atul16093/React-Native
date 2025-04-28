@@ -476,7 +476,9 @@ export const AddFamilyPicture = () => {
       {imageUri ? (
         <KeyboardAvoidingScrollView
           stickyFooter={
-            <TouchableOpacity style={style.continueContainerAddPicture}>
+            <TouchableOpacity
+              onPress={() => navigate.navigate('BottomTabNavigation')}
+              style={style.continueContainerAddPicture}>
               <Text style={style.continueText}>Continue</Text>
             </TouchableOpacity>
           }></KeyboardAvoidingScrollView>

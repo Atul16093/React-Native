@@ -19,6 +19,7 @@ import {
   RenterGender,
   StayWith,
 } from '../screens/InformationScreens/RenterScreen';
+import BottomTabNavigation from './BottomTabNavigation';
 const Stack = createStackNavigator();
 
 const AuthNavigator = [
@@ -37,13 +38,14 @@ const AuthNavigator = [
   {name: 'Pet', component: Pet},
   {name: 'AddRenterPicture', component: AddRenterPicture},
   {name: 'AddFamilyPicture', component: AddFamilyPicture},
+  {name: 'BottomTabNavigation', component: BottomTabNavigation},
 ];
 
 const StackNavigation = () => {
   return (
     <>
       <Stack.Navigator
-        initialRouteName="OnBoardCommon"
+        initialRouteName="AddFamilyPicture"
         screenOptions={{headerShown: false}}>
         {AuthNavigator.map((item, index) => (
           <Stack.Screen
