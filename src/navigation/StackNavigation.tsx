@@ -1,10 +1,9 @@
-import {View, Text} from 'react-native';
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import OnBoardCommon from '../screens/BoardingScreen/OnBoardCommon';
 import SignIn from '../screens/Auth/SignInScreen/SignIn';
 import SignUp from '../screens/Auth/SignUpScreen/SignUp';
-import OtpVerfication from '../screens/Auth/OtpVerficationScreen/OtpVerfication';
+import OtpVerification from '../screens/Auth/OtpVerificationScreen/OtpVerification';
 import SetPassword from '../screens/Auth/SetPasswordScreen/SetPassword';
 import Role from '../screens/InformationScreens/RoleScreen/Role';
 import {
@@ -26,7 +25,7 @@ const AuthNavigator = [
   {name: 'OnBoardCommon', component: OnBoardCommon},
   {name: 'SignIn', component: SignIn},
   {name: 'SignUp', component: SignUp},
-  {name: 'OtpVerification', component: OtpVerfication},
+  {name: 'OtpVerification', component: OtpVerification},
   {name: 'SetPassword', component: SetPassword},
   {name: 'Role', component: Role},
   {name: 'Address', component: Address},
@@ -47,23 +46,12 @@ const StackNavigation = () => {
         initialRouteName="OnBoardCommon"
         screenOptions={{headerShown: false}}>
         {AuthNavigator.map((item, index) => (
-          <Stack.Screen name={item?.name} component={item?.component} />
+          <Stack.Screen
+            key={index}
+            name={item?.name}
+            component={item?.component}
+          />
         ))}
-        {/* <Stack.Screen name="OnBoardCommon" component={OnBoardCommon} />
-        <Stack.Screen name="SignIn" component={SignIn} />
-        <Stack.Screen name="SignUp" component={SignUp} />
-        <Stack.Screen name="OtpVerification" component={OtpVerfication} />
-        <Stack.Screen name="SetPassword" component={SetPassword} />
-        <Stack.Screen name="Role" component={Role} />
-        <Stack.Screen name="Address" component={Address} />
-        <Stack.Screen name="Gender" component={Gender} />
-        <Stack.Screen name="Have" component={Have} />
-        <Stack.Screen name="AddPicture" component={AddPicture} />
-        <Stack.Screen name="RenterGender" component={RenterGender} />
-        <Stack.Screen name="StayWith" component={StayWith} />
-        <Stack.Screen name="Pet" component={Pet} />
-        <Stack.Screen name="AddRenterPicture" component={AddRenterPicture} />
-        <Stack.Screen name="AddFamilyPicture" component={AddFamilyPicture} /> */}
       </Stack.Navigator>
     </>
   );

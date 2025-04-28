@@ -1,11 +1,4 @@
-import {
-  View,
-  Text,
-  SafeAreaView,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import {View, Text, SafeAreaView, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {style} from '../Style';
 import {
@@ -23,8 +16,6 @@ import {
 } from '../../../../assets';
 import {SignupStyle} from './Style';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
-import {TextInput} from 'react-native-gesture-handler';
-import Colors from '../../../utils/Colors';
 import CountryCodePicker from '../CountryCodePicker';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {useForm} from 'react-hook-form';
@@ -72,38 +63,6 @@ const SignUp = () => {
           <View>
             <View>
               <Text style={style.labelText}>Full Name</Text>
-              {/*
-              <Controller
-                control={control}
-                name="username"
-                rules={{
-                  minLength: {
-                    value: 3,
-                    message: 'Username must be at least 3 characters',
-                  },
-                  pattern: {
-                    value: /^[a-zA-Z0-9]+$/,
-                    message: 'Username can only contain letters and numbers',
-                  },
-                  required: 'UserName is required',
-                }}
-                render={({field: {onChange, onBlur, value}}) => (
-                  <TextInput
-                    style={style.passwordInput}
-                    onChangeText={onChange}
-                    onBlur={onBlur}
-                    value={value}
-                    placeholder="Enter your full name"
-                    placeholderTextColor={Colors.PLACEHOLDER_COLOR}
-                  />
-                )}
-              />
-              {errors.username && (
-                <Text style={SignupStyle.errorStyle}>
-                  {errors.username.message}
-                </Text>
-              )}
-              */}
               {/* Full Name Section  */}
               <FormInput
                 control={control}
