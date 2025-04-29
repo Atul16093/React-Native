@@ -16,3 +16,6 @@ export {default as HaveBar} from './images/BarSvg/HaveBar.svg';
 export {default as AddPictureBar} from './images/BarSvg/AddPictureBar.svg';
 export {default as Add} from './images/Add.svg';
 export {default as Remove} from './images/Remove.svg';
+export {default as Bell} from './images/Bell.svg';
+export {default as Oops} from './images/Oops.svg';
+export {default as Plus} from './images/Plus.svg';

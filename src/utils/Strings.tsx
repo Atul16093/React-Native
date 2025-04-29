@@ -106,3 +106,9 @@ export const petConstant = {
   NO: "No- I don't have a pet",
   FUTURE: 'Future Pet',
 };
+export const propertyConstant = {
+  HEADING_TEXT: 'My Property',
+  ERROR_MESSAGE: 'Ohh Nooo!!!',
+  MESSAGE: "You don't have any properties to show.",
+  MESSAGE1: 'Let’s add property',
+};
